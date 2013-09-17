@@ -1,0 +1,272 @@
+/**
+ * Application's styles
+ *
+ * In this file, you set up the look and feel of your application.
+ *
+ * Licensed under Creative Commons Attribution-ShareAlike 3.0 Unported
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright       Copyright 2012-2012, Gabriel Izaias (http://gabrielizaias.com)
+ * @license         CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)
+ */
+
+@font :                 Arial, sans-serif;
+@altFont :              'Lucida Grande', 'Lucida Sans Unicode', @font;
+@altHeadersFont :       'Proxima Nova Regular', @altFont;
+@headersFont :          'Proxima Nova Bold', @altHeadersFont;
+@linkColor :            #008DDD;
+@textColor :            #444;
+@altTextColor :         #999;
+@baseColor :            #444;
+@borderColor :          #E2E2E2;
+@successColor :         green;
+@attentionColor :       yellow;
+@infoColor :            #4787ed;
+@errorColor :           red;
+
+/* ===================================================================
+ * = LIBRARIES
+ * =================================================================== */
+@import url(lib/normalize.less);
+
+/* ===================================================================
+ * = FONTS
+ * =================================================================== */
+@import url(fonts.less);
+
+/* ===================================================================
+ * = TEMPLATE
+ * =================================================================== */
+@import url(mixins.less);
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html {
+    overflow-y: auto;
+    height: 100%;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+       -moz-font-smoothing: antialiased;
+            font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+}
+body {
+    font: 14px/20px @font;
+    color: @textColor;
+
+    &.app {
+        background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAAAAAA7VNdtAAADImlUWHRYTUw6Y29tLmFkb2JlLnhtcAAAAAAAPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjAgNjEuMTM0Nzc3LCAyMDEwLzAyLzEyLTE3OjMyOjAwICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpCRUY5NTEyNThDNDkxMUUwQkU4QzkxNDQ4NjI4NUI5MyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpCRUY5NTEyNjhDNDkxMUUwQkU4QzkxNDQ4NjI4NUI5MyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkJFRjk1MTIzOEM0OTExRTBCRThDOTE0NDg2Mjg1QjkzIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkJFRjk1MTI0OEM0OTExRTBCRThDOTE0NDg2Mjg1QjkzIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+LZuZiwAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAANzSURBVEjHlZVBkl25EQPf/c/pfiwggeKXT+BFyxFjhzQx2nLDIiuRePrVz85uSCDsTVrr7J2tlFw+Pg2VNzbPv+a8STkeKR0i3dCGZE5jqWqVUZD/zWNjTUXjtQif6zp7ZpIiPj/YqjqDU/lxgvb8vJemu7io3tytMXsihpwE98nZAax8NrE/ZHuq1KxlFM+MaS/EOU9fk/1Mb7YGjecCn2N2rdoTWBUyHfb5g4mOXCXPuDggi3OmSmSIo3r2UNVaOsHE5qnW7dVUItYEas3vB37YZAsN150VSVbkw7V6LWloKwVzjx9y/AO7sKsNmru1Unrt7yeZwZqpTR48ZKBYlY/PbI97jh3NII4/iRvuZOqn42Y7exQZZfaA5zC1rXh0J2r6iXWmjyWpBg+NKr8HXPd7G6Ha1FHs9as+Lu7Unlk5i7nBEHt8aAiF3K3QimekdpYqWtdV7btCvwP2qe2bDYmjm/R6bFixb1DlJU3c87nDPrHHjRxP1lOB7dlo0MzaTFa5+cQOfmC22rjjxq1W/C3eTwSeyw1WYgaDOk1svY78Ion4c2vxJCFYdaZbOt/b4Eoxrjl2uC+Mjtvn+3hSJEOwqd/PF0mPf6GGJ0CWMLO6HmyYlVQF/4KnZyulHcFb7QZwi9bWfCe5V9qcnXDt55+v8L/OeTaVN11XG/m2p0Pmjtu3PyCIcNJs7HnWFG8P6FJwE2fNpKlOFieHfnWyzvu4QTq9ABbzrdqbnmvX8keBKtnubu9TqQFUb0uVC/k7IzwNShqKWV1Dd22Tva758f6fUB+ccGQbz4zt1p+beNBJBF5pC23brz4/c7O7r+x0snHGq0wIpo1vhcLHhceGWI0ky8rnRLLpqzU5yIJTkUhv8tzNHwLwcMl4Z4Q2d2+cgJuhxsFiZqYJL5r72DN2HMhKsr3eldSmEPbAsmM2SvOQJEgvydrXt2wwftlytJaF4lwZlMfWeFv2TYCZqTdZftcJz2/p+61Dnj+0qznP3xIoCvLHw4kvGl89v9bb/a78cy31Z/V9Y+g8ppM/SsBzLdN70I5CfDyjBOKYXtZNpOHW0/o5OsT+gzJ7/uHP/sXOz2l2LyPOjK3rNizDC+Zbhv8D1fOXeoKOtlerVmILZC45dr8kg+CpO3Ynoe5m+iJPqaSTfmV7qT9J302l58/i1bD/AStu9y2AIQc/AAAAAElFTkSuQmCC") #EDEDED;
+        background: #f9f9f9;
+    }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 20px;
+}
+h1,
+h2,
+h3 {
+    font-family: @headersFont;
+}
+h4,
+h5,
+h6 {
+    font-family: @altHeadersFont;
+}
+p {
+    margin: 0 0 20px;
+
+    &:last-of-type {
+        margin: 0;
+    }
+}
+a {
+    color: @linkColor;
+    outline: none;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+    &:visited {
+        color: darken(@linkColor, 20%);
+    }
+    &:visited,
+    &:hover {
+        outline: none;
+    }
+}
+ul,
+ol {
+    padding-left: 20px;
+}
+ol {
+    list-style-type: decimal;
+}
+ul ul,
+ol ol {
+    margin: 0;
+    padding-left: 15px;
+}
+small {
+    font-size: 85%;
+}
+textarea {
+    overflow: auto;
+}
+img {
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+}
+button {
+    cursor: pointer;
+}
+input {
+    &[type=button],
+    &[type=submit] {
+        cursor: pointer;
+    }
+    &[type=radio] {
+        vertical-align: text-bottom;
+    }
+    &[type=checkbox] {
+        vertical-align: bottom;
+    }
+}
+.ie7 input[type="checkbox"] {
+    vertical-align: baseline;
+}
+.ie6 input {
+    vertical-align: text-bottom;
+}
+
+/* Image Replacement */
+.ir {
+    display: block;
+    text-indent: -9999px;
+    overflow: hidden;
+    outline: 0 !important;
+}
+
+/* Buttons */
+@import url(modules/buttons.less);
+
+/* HEADER
+ * =================================================================== */
+@import url(header.less);
+
+/* Search */
+@import url(search.less);
+
+/* Dropdown Menus */
+@import url(modules/dropdown.less);
+
+/* CONTENT
+ * =================================================================== */
+#main {
+    position: relative;
+    z-index: 1;
+    box-sizing: border-box;
+    padding: 53px 0 0 220px;
+}
+.has-right-sidebar {
+    #main {
+        padding-right: 220px;
+    }
+    .sidebar-right {
+        display: block;
+    }
+}
+
+/* Sidebar */
+@import url(sidebar.less);
+
+.content {
+    position: relative;
+    margin: 0 auto;
+    padding: 25px;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.content-header {
+    border-bottom: 1px dotted @borderColor;
+    padding-bottom: 12px;
+    margin-bottom: 20px;
+}
+.content-title {
+    margin-bottom: 12px;
+
+    &:before {
+        font-size: 30px;
+    }
+}
+.content-sub-title {
+    font: 12px/16px @altFont;
+    color: @altTextColor;
+}
+.content-wrapper {
+    background: #fff;
+    border: 1px solid @borderColor;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+.action-bar {
+    /*overflow: hidden;*/
+    margin-bottom: 20px;
+}
+
+/* Projects */
+@import url(content/project.less);
+
+.avatar {
+    @base : 25px;
+
+    img {
+        width: @base;
+        height: @base;
+        .border-radius(50px, 50px, 50px, 50px);
+        position: relative;
+        top: 7px;
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.67),
+                    0 2px 0px rgba(255, 255, 255, 0.1);
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: @base;
+        height: @base;
+        z-index: 1;
+        margin-top: 7px;
+        margin-left: 0px;
+        .border-radius(50px, 50px, 50px, 50px);
+        box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5);
+    }
+}
+
+.copyright {
+    bottom: 10px !important;
+    color: @altTextColor;
+    small {
+        font: 10px/14px @altFont !important;
+    }
+}
+
+/* ===================================================================
+ * = MOBILE
+ * =================================================================== */
+@import url(mobile.less);
+
+/* ===================================================================
+ * = CONVENIENCE
+ * =================================================================== */
+@import url(utils.less);

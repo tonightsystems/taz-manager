@@ -1,0 +1,97 @@
+.btn {
+    display: inline-block;
+    .gradient-background(whiteSmoke, #f1f1f1);
+    border: 1px solid @borderColor;
+    .border-radius(2px, 2px, 2px, 2px);
+    cursor: default;
+    font-size: 11px;
+    font-weight: bold;
+    text-align: center;
+    white-space: nowrap;
+    line-height: 27px;
+    min-width: 54px;
+    outline: none !important;
+    padding: 1px 12px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .4);
+
+    &,
+    &:visited {
+        color: @textColor;
+    }
+
+    // STATES
+    &:focus,
+    &:hover {
+        cursor: pointer;
+        text-decoration: none;
+        border-color: darken(@borderColor, 10%);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .4),
+                    0 1px 1px rgba(0, 0, 0, .078);
+    }
+    &:focus {
+        border-color: darken(@borderColor, 20%);
+    }
+    &:active {
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, .178);
+    }
+
+    &:before {
+        font-size: 16px;
+        line-height: 16px;
+        margin-right: 5px;
+        color: lighten(@textColor, 10%);
+    }
+}
+// SIZES
+.btn-large {
+    font-size: 16px;
+    padding: 6px 18px;
+
+    &:before {
+        font-size: 20px;
+        line-height: 20px;
+        margin-right: 8px;
+    }
+}
+.btn-small {
+    font-size: 10px;
+    padding: 1px 6px;
+    line-height: 18px;
+
+    &:before {
+        display: none;
+    }
+}
+
+// TYPES
+.btn-info {
+    .gradient-background(lighten(@infoColor, 10%), @infoColor);
+    border-color: #3079ed;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
+
+    &,
+    &:visited,
+    &:before {
+        color: #fff;
+    }
+
+    &:hover,
+    &:focus {
+        .gradient-background(lighten(@infoColor, 10%), darken(@infoColor, 1%));
+        border-color: darken(#3079ed, 10%);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2),
+                    0 1px 2px rgba(0, 0, 0, .178);
+    }
+    &:active {
+        border-color: #3079ed;
+        .gradient-background(lighten(@infoColor, 10%), @infoColor);
+        box-shadow: inset 0 2px 3px rgba(0, 0, 0, .178);
+    }
+}
+.btn-success {
+}
+.btn-warning {
+}
+.btn-danger,
+.btn-error {
+}
