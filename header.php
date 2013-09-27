@@ -32,15 +32,12 @@
         <!-- LOGO -->
         <a href="index.php" title="Taz Manager" accesskey="1" tabindex="-1" class="left taz-icon taz-icon-mini">Taz Manager</a>
 
-        <ul class="top-bar-nav left">
-            <!-- SEARCH -->
-            <li><input type="search" name="s" placeholder="Buscar por" class="search-input" autocomplete="off"></li>
-        </ul>
         <ul class="top-bar-nav right">
+            <!-- <li><a href="#" class="top-bar-btn" data-icon="s"></a> <input type="search" name="s" placeholder="Buscar por" class="search-input none" autocomplete="off"></li> -->
             <li class=""><a href="task-new.php" class="top-bar-btn" data-icon="W">Nova tarefa</a></li>
             <li class=""><a href="notifications.php" class="top-bar-btn notifications" data-icon=":"><span class="notifications-count">13</span></a></li>
             <li class="dropdown">
-                <a href="user.php" class="top-bar-btn avatar"><img src="img/avatar.jpg"></a>
+                <a href="user.php" class="top-bar-btn">Gabriel Izaias</a>
                 <ul class="dropdown-target">
                     <li><a href="user.php">Perfil</a></li>
                     <li><a href="#">Lorem Ipsum</a></li>

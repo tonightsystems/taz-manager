@@ -4,6 +4,7 @@
         <h3 class="sidebar-title">Dashboard</h3>
         <ul>
             <li><a href="index.php" data-icon="n" class="selected">Minhas tarefas</a></li>
+            <li><a href="index.php" data-icon="]">Delegadas</a></li>
         </ul>
     </section>
     <section class="sidebar-box">

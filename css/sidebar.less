@@ -1,16 +1,19 @@
 .sidebar {
     position: fixed;
     width: 220px;
-    top: 53px;
+    top: 50px;
     bottom: 0;
-    padding: 15px;
+    padding: 15px 0;
     font-size: 13px;
-    background: #fff;
+    background: #dde4ea;
     z-index: 4;
+    border-color: darken(@borderColor, 10%);
 }
 .sidebar-left {
     left: 0px;
-    border-right: 1px solid @borderColor;
+    border-right-width: 1px;
+    border-right-style: solid;
+    box-shadow: inset -1px 0 rgba(255, 255, 255, .4);
 }
 .sidebar-right {
     right: 0px;
@@ -30,16 +33,20 @@
     li {
         list-style: none;
         font: 13px/26px @font;
+        margin-bottom: 1px;
 
         a {
             display: block;
-            padding: 2px 0;
+            padding: 1px 14px;
             font-weight: bold;
-            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
-            color: lighten(@textColor, 5%);
+            color: lighten(@baseColor, 10%);
+            text-shadow: 0 1px #fff;
 
             &.selected {
                 color: @baseColor;
+                .gradient-background(#c0ccd7, #ced7e0);
+                box-shadow: inset 0px 1px #9cacbc, 0px 1px #ecf0f3;
+                border-left: solid 3px @baseColor;
             }
 
             &:hover,
@@ -51,8 +58,10 @@
     }
 }
 .sidebar-title {
-    font: normal 11px/12px @altFont;
-    color: @altTextColor;
-    margin: 0 0 10px;
+    font: normal 11px/12px @headersFont;
+    color: #adb2b7;
+    text-shadow: 0 1px #fff;
+    margin: 0 14px 10px;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
