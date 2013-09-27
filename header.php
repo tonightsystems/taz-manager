@@ -5,8 +5,8 @@
 <!--[if IE]><![endif]-->
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Project Manager</title>
-<meta name="author" content="" />
+<title>Taz Manager</title>
+<meta name="author" content="Tonight Systems" />
 <meta name="description" content="" />
 <meta name="robots" content="noindex,nofollow,nodp" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -29,29 +29,24 @@
 <div id="all">
     <!-- HEADER -->
     <header id="header">
-        <!-- SEARCH -->
-        <div class="left-side">
-            <ul class="top-bar-nav">
-                <li><a href="index.php" class="top-bar-btn" data-icon="3">Taz Manager Logo</a></li>
-                <!-- <li><input type="search" name="" id="search-input" placeholder="Buscar por" autocomplete="off"></li> -->
-            </ul>
-        </div>
         <!-- LOGO -->
+        <a href="index.php" title="Taz Manager" accesskey="1" tabindex="-1" class="left taz-icon taz-icon-mini">Taz Manager</a>
 
-        <!-- TOP NAV -->
-        <div class="right-side">
-            <ul class="top-bar-nav">
-                <li class=""><a href="task-new.php" class="top-bar-btn" data-icon="W">Nova tarefa</a></li>
-                <li class=""><a href="notifications.php" class="top-bar-btn notifications" data-icon=":"><span class="notifications-count">13</span></a></li>
-                <li class="dropdown">
-                    <a href="user.php" class="top-bar-btn avatar"><img src="img/avatar.jpg"></a>
-                    <ul class="dropdown-target">
-                        <li><a href="user.php">Perfil</a></li>
-                        <li><a href="#">Lorem Ipsum</a></li>
-                        <li class="separator"></li>
-                        <li><a href="login.php">Sair</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
+        <ul class="top-bar-nav left">
+            <!-- SEARCH -->
+            <li><input type="search" name="s" placeholder="Buscar por" class="search-input" autocomplete="off"></li>
+        </ul>
+        <ul class="top-bar-nav right">
+            <li class=""><a href="task-new.php" class="top-bar-btn" data-icon="W">Nova tarefa</a></li>
+            <li class=""><a href="notifications.php" class="top-bar-btn notifications" data-icon=":"><span class="notifications-count">13</span></a></li>
+            <li class="dropdown">
+                <a href="user.php" class="top-bar-btn avatar"><img src="img/avatar.jpg"></a>
+                <ul class="dropdown-target">
+                    <li><a href="user.php">Perfil</a></li>
+                    <li><a href="#">Lorem Ipsum</a></li>
+                    <li class="separator"></li>
+                    <li><a href="login.php">Sair</a></li>
+                </ul>
+            </li>
+        </ul>
     </header>
