@@ -12,7 +12,7 @@
     min-width: 54px;
     outline: none !important;
     padding: 1px 12px;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .4);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .3);
 
     &,
     &:visited {
@@ -24,14 +24,13 @@
     &:hover {
         cursor: pointer;
         text-decoration: none;
-        border-color: darken(@borderColor, 10%);
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .4),
-                    0 1px 1px rgba(0, 0, 0, .078);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .3);
     }
     &:focus {
-        border-color: darken(@borderColor, 20%);
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .8);
     }
     &:active {
+        border-color: darken(@borderColor, 10%);
         box-shadow: inset 0 1px 2px rgba(0, 0, 0, .178);
     }
 
@@ -67,7 +66,6 @@
 .btn-info {
     .gradient-background(lighten(@infoColor, 10%), @infoColor);
     border-color: #3079ed;
-    box-shadow: inset 0 1px 0 rgba(255, 255, 255, .1);
 
     &,
     &:visited,
@@ -79,19 +77,53 @@
     &:focus {
         .gradient-background(lighten(@infoColor, 10%), darken(@infoColor, 1%));
         border-color: darken(#3079ed, 10%);
-        box-shadow: inset 0 1px 0 rgba(255, 255, 255, .2),
-                    0 1px 2px rgba(0, 0, 0, .178);
     }
     &:active {
         border-color: #3079ed;
         .gradient-background(lighten(@infoColor, 10%), @infoColor);
-        box-shadow: inset 0 2px 3px rgba(0, 0, 0, .178);
+        border-color: darken(#3079ed, 10%);
     }
 }
 .btn-success {
+    .gradient-background(lighten(@successColor, 10%), @successColor);
+    border-color: darken(@successColor, 10%);
+
+    &,
+    &:visited,
+    &:before {
+        color: #fff;
+    }
+
+    &:active {
+        border-color: darken(@successColor, 10%);
+    }
 }
 .btn-warning {
+    .gradient-background(lighten(@attentionColor, 10%), @attentionColor);
+    border-color: darken(@attentionColor, 15%);
+
+    &,
+    &:visited,
+    &:before {
+        color: #fff;
+    }
+
+    &:active {
+        border-color: darken(@attentionColor, 15%);
+    }
 }
 .btn-danger,
 .btn-error {
+    .gradient-background(lighten(@errorColor, 10%), @errorColor);
+    border-color: darken(@errorColor, 15%);
+
+    &,
+    &:visited,
+    &:before {
+        color: #fff;
+    }
+
+    &:active {
+        border-color: darken(@errorColor, 15%);
+    }
 }
