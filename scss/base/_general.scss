@@ -1,0 +1,45 @@
+html {
+    overflow-y: auto;
+}
+body {
+    background: $background-color;
+    font-size: $font-size;
+    line-height: $line-height;
+    font-family: $default-font;
+    font-weight: $font-weight;
+    color: $text-color;
+    overflow: hidden;
+
+    -webkit-font-smoothing: subpixel-antialiased;
+            font-smoothing: subpixel-antialiased;
+}
+p {
+    margin: 0 0 20px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+a {
+    color: $link-color;
+
+    &:hover {
+        color: $link-hover-color;
+    }
+    &:visited {
+        color: $link-color;
+    }
+    &:visited,
+    &:hover {
+        outline: none;
+    }
+}
+small {
+    font-size: 85%;
+}
+img {
+    -ms-interpolation-mode: bicubic;
+}
+code {
+    font-family: $mono-font;
+}

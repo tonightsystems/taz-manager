@@ -1,0 +1,23 @@
+/* Default styles */
+textarea {
+    overflow: auto;
+}
+input[type=button],
+input[type=submit],
+button {
+    cursor: pointer;
+}
+
+/* Disabled styles */
+input[disabled],
+textarea[disabled] {
+    background:  $input-disabled-background;
+    cursor: not-allowed;
+}
+
+.input {
+    background: $input-background;
+    border: 1px solid $input-border-color;
+    font-family: $mono-font;
+    line-height: $line-height;
+}

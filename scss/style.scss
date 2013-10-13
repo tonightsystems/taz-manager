@@ -1,0 +1,80 @@
+/**
+ * Application's styles
+ *
+ * In this file, you set up the look and feel of your application.
+ *
+ * Licensed under Creative Commons Attribution-ShareAlike 3.0 Unported
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright       Copyright 2013-2013, Tonight Systems
+ * @license         CC BY-SA 3.0 (http://creativecommons.org/licenses/by-sa/3.0/)
+ */
+
+/* ===================================================================
+ * = VARIABLES
+ * =================================================================== */
+/* Typography */
+$sans-font:                 Arial, sans-serif;
+$serif-font:                Times, serif;
+$mono-font:                 Monaco, 'Courier New', monospace;
+
+$default-font:              $sans-font;
+$headers-font:              $serif-font;
+$font-size:                 14px;
+$line-height:               18px;
+$font-weight:               normal;
+
+/* Colors */
+$background-color:          #f9f9f9;
+$text-color:                #222;
+$link-color:                #08c;
+$link-hover-color:          darken($link-color, 15%);
+
+/* Form */
+$input-background:          #fff;
+$input-border-color:        #ccc;
+$input-border-radius:       3px;
+$input-disabled-background: #eee;
+$input-placeholder-color:   lighten($text-color, 20%);
+
+/* ===================================================================
+ * = VENDOR LIBRARIES
+ * =================================================================== */
+@import "vendor/normalize",
+        "vendor/animate";
+
+/* ===================================================================
+ * = FONT-FACE
+ * =================================================================== */
+@import "fonts";
+
+/* ===================================================================
+ * = TEMPLATE
+ * =================================================================== */
+@import "base/general",
+        "base/forms",
+        "base/lists",
+        "base/utils";
+
+/* HEADER
+ * =================================================================== */
+#header {}
+
+/* CONTENT
+ * =================================================================== */
+#main { }
+
+/* FOOTER
+ * =================================================================== */
+#footer { }
+
+/* ===================================================================
+ * = SECTIONS
+ * =================================================================== */
+/*@import "sections/login",
+        "sections/dashboard";*/
+
+/* ===================================================================
+ * = MOBILE
+ * =================================================================== */
+@import "mobile";
