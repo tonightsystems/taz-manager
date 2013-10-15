@@ -29,6 +29,9 @@ $background-color:          #f9f9f9;
 $text-color:                #222;
 $link-color:                #08c;
 $link-hover-color:          darken($link-color, 15%);
+$nav-background-color:      #343434;
+$nav-link-color:            darken(#f9f9f9, 15%);
+$nav-selected-bg:           #53595f;
 
 /* Form */
 $input-background:          #fff;
@@ -52,29 +55,26 @@ $input-placeholder-color:   lighten($text-color, 20%);
  * = TEMPLATE
  * =================================================================== */
 @import "base/general",
+        "base/mixins",
         "base/forms",
         "base/lists",
         "base/utils";
 
-/* HEADER
+/* MODULES
  * =================================================================== */
-#header {}
+@import "modules/icons";
 
-/* CONTENT
+/* ELEMENTS
  * =================================================================== */
-#main { }
+@import "elements/nav",
+        "elements/content",
+        "elements/footer";
 
-/* FOOTER
- * =================================================================== */
-#footer { }
-
-/* ===================================================================
- * = SECTIONS
+/* SECTIONS
  * =================================================================== */
 /*@import "sections/login",
         "sections/dashboard";*/
 
-/* ===================================================================
- * = MOBILE
+/* MOBILE
  * =================================================================== */
 @import "mobile";

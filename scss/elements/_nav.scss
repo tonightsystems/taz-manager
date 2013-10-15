@@ -1,0 +1,105 @@
+#nav {
+    position: absolute;
+    width: 220px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: $nav-background-color;
+
+    .logo {
+        margin: 10px 12px;
+    }
+}
+.nav,
+.nav-box {
+    overflow: hidden;
+}
+.nav {
+    color: #C9CBCA;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 54px;
+    bottom: 50px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.nav-box {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.nav-title {
+    color: darken(#C9CBCA, 30%);
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.1em;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 8px 12px;
+}
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-item {
+    position: relative;
+    margin-bottom: 2px;
+}
+.nav-link {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    padding: 5px 12px;
+    white-space: nowrap;
+    line-height: 17px;
+    /*height: 26px;*/
+    vertical-align: top;
+
+    &,
+    &:visited {
+        color: $nav-link-color;
+    }
+
+    &:hover,
+    &:focus {
+        color: #fff;
+    }
+
+    &:after {
+        background-image: -webkit-gradient(linear, 0% 50%, 15 50%, color-stop(0%, rgba(69,78,89,0)), color-stop(100%, $nav-background-color));
+        background-image: -webkit-linear-gradient(left, rgba(69,78,89,0) 0px, $nav-background-color 15px);
+        background-image: -moz-linear-gradient(left, rgba(69,78,89,0) 0px, $nav-background-color 15px);
+        background-image: -o-linear-gradient(left, rgba(69,78,89,0) 0px, $nav-background-color 15px);
+        background-image: linear-gradient(left, rgba(69,78,89,0) 0px, $nav-background-color 15px);
+        display: block;
+        width: 20px;
+        height: 28px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        pointer-events: none;
+        z-index: 10;
+        background-position: left top;
+        content: '';
+    }
+
+    .glyphicon {
+        font-size: 14px;
+        margin-right: 5px;
+    }
+}
+.nav-item.selected .nav-link {
+    color: #fff;
+    background: $nav-selected-bg;
+
+    &:after {
+        background-image: -webkit-gradient(linear, 0% 50%, 15 50%, color-stop(0%, rgba(69,78,89,0)), color-stop(100%, $nav-selected-bg));
+        background-image: -webkit-linear-gradient(left, rgba(69,78,89,0) 0px, $nav-selected-bg 15px);
+        background-image: -moz-linear-gradient(left, rgba(69,78,89,0) 0px, $nav-selected-bg 15px);
+        background-image: -o-linear-gradient(left, rgba(69,78,89,0) 0px, $nav-selected-bg 15px);
+        background-image: linear-gradient(left, rgba(69,78,89,0) 0px, $nav-selected-bg 15px);
+    }
+}
