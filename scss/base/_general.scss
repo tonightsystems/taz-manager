@@ -7,6 +7,7 @@
 }
 html {
     overflow-y: auto;
+    height: 100%;
 }
 body {
     background: $background-color;
@@ -16,9 +17,17 @@ body {
     font-weight: $font-weight;
     color: $text-color;
     overflow: hidden;
+    min-height: 100%;
+
+    text-rendering: optimizeLegibility;
 
     -webkit-font-smoothing: subpixel-antialiased;
             font-smoothing: subpixel-antialiased;
+
+    -webkit-font-feature-settings: "liga";
+       -moz-font-feature-settings: "liga=1";
+        -ms-font-feature-settings: "liga";
+            font-feature-settings: "liga";
 }
 p {
     margin: 0 0 20px;
@@ -29,9 +38,11 @@ p {
 }
 a {
     color: $link-color;
+    text-decoration: none;
 
     &:hover {
         color: $link-hover-color;
+        text-decoration: underline;
     }
     &:visited {
         color: $link-color;
