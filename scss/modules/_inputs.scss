@@ -17,3 +17,10 @@
         outline: none;
     }
 }
+.input[disabled],
+.input.disabled,
+.disabled .input {
+    border-color: $input-border-color !important;
+    pointer-events: none;
+    @include opacity(.6);
+}

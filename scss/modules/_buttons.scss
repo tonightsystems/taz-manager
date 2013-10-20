@@ -46,6 +46,11 @@
         }
     }
 }
+.btn.disabled,
+.disabled .btn {
+    @include opacity(.6);
+    pointer-events: none;
+}
 .btn-default {
     @include button-type(#ddd, $text-color);
 }
