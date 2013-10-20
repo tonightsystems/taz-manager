@@ -1,0 +1,60 @@
+@mixin button-type($color, $text-color) {
+    background-color: $color;
+
+    &,
+    &:hover,
+    &:visited {
+        color: $text-color;
+    }
+
+    &:hover,
+    &:focus {
+        text-decoration: none;
+        background-color: darken($color, 5%);
+        border-color: darken($color, 15%);
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 3px 0.8em;
+    margin-bottom: 0;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.428571429;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    text-decoration: none;
+
+    @include border-radius();
+    @include no-select();
+
+    .glyphicon {
+        top: 3px;
+        margin-left: 5px;
+
+        @include opacity(.8);
+    }
+
+    &:hover,
+    &:focus {
+        .glyphicon {
+            @include opacity(1);
+        }
+    }
+}
+.btn-default {
+    @include button-type(#ddd, $text-color);
+}
+.btn-success {
+    @include button-type($success-color, #fff);
+}
+.btn-danger {
+    @include button-type($danger-color, #fff);
+}
+.btn-info {
+    @include button-type($info-color, #fff);
+}

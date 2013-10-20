@@ -33,10 +33,13 @@ $link-hover-color:          darken($link-color, 15%);
 $nav-background-color:      #333;
 $nav-link-color:            darken(#f9f9f9, 15%);
 $nav-selected-bg:           #242424;
+$success-color:             #77d165;
+$danger-color:              #d9534f;
+$info-color:                #428bca;
 
 /* Form */
 $input-background:          #fff;
-$input-border-color:        #ccc;
+$input-border-color:        #ddd;
 $input-border-radius:       3px;
 $input-disabled-background: #eee;
 $input-placeholder-color:   lighten($text-color, 20%);
@@ -67,7 +70,9 @@ $app-header-height:         45px;
 
 /* MODULES
  * =================================================================== */
-@import "modules/icons";
+@import "modules/icons",
+        "modules/inputs",
+        "modules/buttons";
 
 #app {
     position: absolute;

@@ -21,6 +21,20 @@
                 <h1 class="app-header-title">Minhas tarefas</h1>
             </div>
             <div class="app-content">
+                <!-- Toolbar -->
+                <div class="toolbar">
+                    <div class="toolbar-sections-left">
+                        <div class="toolbar-section toolbar-search">
+                            <input type="search" name="" class="input" placeholder="Filtrar por" accesskey="s">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </div>
+                    </div>
+                    <div class="toolbar-sections-right">
+                        <div class="toolbar-section">
+                            <a href="#" class="btn btn-default">Ordenar por: Projeto <i class="glyphicon glyphicon-chevron-down"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

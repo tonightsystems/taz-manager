@@ -73,3 +73,42 @@
 .content-box {
     padding: 20px;
 }
+.toolbar {
+    padding: 6px 10px;
+    background: #fff;
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+}
+.toolbar-section {
+    float: left;
+    border-right: 1px solid #ddd;
+    padding: 0 10px;
+    line-height: 26px;
+
+    &:last-of-type {
+        border-right: none;
+        padding-right: 0;
+    }
+}
+.toolbar-sections-left {
+    float: left;
+}
+.toolbar-sections-right {
+    float: right;
+}
+.toolbar-search {
+    position: relative;
+
+    .input {
+        padding-right: 25px;
+    }
+
+    .glyphicon {
+        pointer-events: none;
+        position: absolute;
+        font-size: $font-size - 1;
+        right: 7px;
+        top: 6px;
+        color: $input-border-color;
+    }
+}
