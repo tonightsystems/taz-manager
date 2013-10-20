@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Taz Manager</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
 </head>
 <body role="application">
     <div id="app">
