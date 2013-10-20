@@ -73,15 +73,21 @@
 .content-box {
     padding: 20px;
 }
+.content-inner {
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 1px #cbced2,
+                0px 1px 1px 1px rgba(0,0,0,0.05);
+}
 .toolbar {
     padding: 6px 10px;
     background: #fff;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid $border-color;
     overflow: hidden;
 }
 .toolbar-section {
     float: left;
-    border-right: 1px solid #ddd;
+    border-right: 1px solid $border-color;
     padding: 0 10px;
     line-height: 26px;
 
@@ -97,18 +103,10 @@
     float: right;
 }
 .toolbar-search {
+    width: 300px;
     position: relative;
 
-    .input {
-        padding-right: 25px;
-    }
-
-    .glyphicon {
-        pointer-events: none;
-        position: absolute;
-        font-size: $font-size - 1;
-        right: 7px;
-        top: 6px;
-        color: $input-border-color;
+   .input {
+        width: 100%;
     }
 }
