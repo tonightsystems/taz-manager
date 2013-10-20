@@ -3,11 +3,11 @@
     top: 0;
     bottom: 0;
     right: 0;
-    left: 220px;
+    left: $sidebar-width;
 }
 .app-header {
     position: relative;
-    height: 45px;
+    height: $app-header-height;
     left: 0;
     right: 0;
     background: lighten($primary-color, 10%);
@@ -20,7 +20,7 @@
 .app-header-nav {
     margin: 0;
     padding: 0;
-    height: 45px;
+    height: $app-header-height;
 
     &.right {
         position: absolute;
@@ -64,7 +64,7 @@
 }
 .app-content {
     position: absolute;
-    top: 45px;
+    top: $app-header-height;
     right: 0;
     left: 0;
     bottom: 0;
