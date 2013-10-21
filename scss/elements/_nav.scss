@@ -1,0 +1,107 @@
+#app-nav {
+    position: absolute;
+    width: $sidebar-width;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background: $nav-background-color;
+
+    .logo {
+        margin: 10px 12px;
+    }
+}
+.nav,
+.nav-box {
+    overflow: hidden;
+}
+.nav {
+    color: #C9CBCA;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 54px;
+    bottom: 50px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.nav-box {
+    margin-bottom: 10px;
+}
+.nav-title {
+    color: darken(#C9CBCA, 35%);
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 0.2em;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 4px 12px;
+}
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.nav-item {
+    position: relative;
+    margin-bottom: 2px;
+}
+.nav-link {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    text-decoration: none;
+    padding: 6px 12px 5px;
+    white-space: nowrap;
+    font-size: 13px;
+    line-height: 19px;
+    vertical-align: top;
+
+    &,
+    &:visited {
+        color: $nav-link-color;
+    }
+
+    &:hover,
+    &:focus {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    &:after {
+        background-image: -webkit-gradient(linear, 0% 50%, 15 50%, color-stop(0%, rgba(69,78,89,0)), color-stop(100%, $nav-background-color));
+        background-image: -webkit-linear-gradient(left, rgba(69,78,89,0) 0px, $nav-background-color 15px);
+        background-image: -moz-linear-gradient(left, rgba(69,78,89,0) 0px, $nav-background-color 15px);
+        background-image: -o-linear-gradient(left, rgba(69,78,89,0) 0px, $nav-background-color 15px);
+        background-image: linear-gradient(left, rgba(69,78,89,0) 0px, $nav-background-color 15px);
+        display: block;
+        width: 20px;
+        height: 30px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        pointer-events: none;
+        z-index: 10;
+        background-position: left top;
+        content: '';
+    }
+
+    .glyphicon {
+        margin-right: 5px;
+    }
+}
+.nav-item.selected .nav-link {
+    color: #fff;
+    background: $nav-selected-bg;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, .3) inset,
+                0 1px 0 rgba(255, 255, 255, .1),
+                3px 0 0 $primary-color inset;
+
+    &:after {
+        background-image: -webkit-gradient(linear, 0% 50%, 15 50%, color-stop(0%, rgba(69,78,89,0)), color-stop(100%, $nav-selected-bg));
+        background-image: -webkit-linear-gradient(left, rgba(69,78,89,0) 0px, $nav-selected-bg 15px);
+        background-image: -moz-linear-gradient(left, rgba(69,78,89,0) 0px, $nav-selected-bg 15px);
+        background-image: -o-linear-gradient(left, rgba(69,78,89,0) 0px, $nav-selected-bg 15px);
+        background-image: linear-gradient(left, rgba(69,78,89,0) 0px, $nav-selected-bg 15px);
+    }
+}

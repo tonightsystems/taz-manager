@@ -1,0 +1,84 @@
+.task-list-wrapper {
+    overflow: hidden;
+    background: #fff;
+    padding: 10px;
+
+    header {
+        padding: 10px;
+        overflow: hidden;
+    }
+}
+.task-list-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+    color: lighten($text-color, 50%);
+}
+.task-list {
+    margin: 0;
+}
+.task-list-item {
+    list-style: none;
+    padding: 0 10px;
+    font-size: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    @include border-radius();
+
+    &.active {
+        background-color: lighten($primary-color, 25%);
+
+        .task-list-item-inner {
+            box-shadow: none;
+        }
+    }
+}
+.task-list-item-add {
+    padding-left: 27px;
+}
+.task-list-item-inner {
+    position: relative;
+    padding: 7px 0;
+    overflow: hidden;
+    box-shadow: inset 0 -1px 0 lighten($border-color, 7%);
+}
+.task-checkbox {
+    position: relative;
+    cursor: pointer;
+    float: left;
+
+    &:before {
+        text-indent: 0;
+        position: absolute;
+        @extend .glyphicon;
+        content: "\e157";
+        font-size: 17px;
+        color: lighten($text-color, 30%);
+    }
+
+    &:hover:before {
+        color: $text-color;
+    }
+
+    &.checked:before {
+        content: "\e067";
+    }
+
+    input {
+        visibility: hidden;
+    }
+}
+.task-name {
+}
+.task-due-date {
+    position: relative;
+    color: #b4b4b4;
+}
+
+.task-checkbox,
+.task-name,
+.task-due-date,
+.task-tags,
+.task-asignee {
+    padding-right: 15px !important;
+}
