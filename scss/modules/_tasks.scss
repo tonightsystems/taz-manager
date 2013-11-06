@@ -74,11 +74,16 @@
     position: relative;
     color: #b4b4b4;
 }
-
 .task-checkbox,
 .task-name,
 .task-due-date,
 .task-tags,
 .task-asignee {
     padding-right: 15px !important;
+}
+.task {
+    padding: 10px 20px;
+}
+.task-header {
+
 }
