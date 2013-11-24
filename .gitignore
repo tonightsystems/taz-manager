@@ -2,6 +2,7 @@
 # Folder view configuration files
 # ----------------------------------------------------------------------
 .sass_cache
+.sass_cache?
 .DS_Store
 Desktop.ini
 node_modules
