@@ -1,0 +1,27 @@
+{
+    "name": "taz-manager",
+    "description": "A simple and fast task manager",
+    "version": "0.1.0",
+    "homepage": "http://github.com/tonightsystems/taz-manager",
+    "author": {
+        "name": "Tonight Systems Team",
+        "url": "http://github.com/tonightsystems"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/tonightsystems/taz-manager.git"
+    },
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/tonightsystems/taz-manager/blob/master/LICENSE"
+        }
+    ],
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-contrib-jshint": "~0.7.1",
+        "grunt-contrib-uglify": "~0.2.6",
+        "grunt-contrib-sass": "~0.5.0",
+        "grunt-contrib-watch": "~0.5.3"
+    }
+}
