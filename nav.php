@@ -5,8 +5,8 @@
         <div class="nav-box">
             <h4 class="nav-title">Dashboard</h4>
             <ul class="nav-list">
-                <li class="nav-item"><a href="#" class="nav-link"><i class="glyphicon glyphicon-dashboard"></i> Dashboard</a></li>
-                <li class="nav-item"><a href="#" class="nav-link"><i class="glyphicon glyphicon-calendar"></i> Calendário</a></li>
+                <!-- <li class="nav-item"><a href="#" class="nav-link"><i class="glyphicon glyphicon-dashboard"></i> Dashboard</a></li> -->
+                <!-- <li class="nav-item"><a href="#" class="nav-link"><i class="glyphicon glyphicon-calendar"></i> Calendário</a></li> -->
                 <li class="nav-item selected"><a href="#" class="nav-link"><i class="glyphicon glyphicon-inbox"></i> Minhas tarefas</a></li>
                 <li class="nav-item"><a href="#" class="nav-link"><i class="glyphicon glyphicon-hand-right"></i> Tarefas delegadas</a></li>
                 <li class="nav-item"><a href="#" class="nav-link"><i class="glyphicon glyphicon-eye-open"></i> Tarefas que eu sigo</a></li>
