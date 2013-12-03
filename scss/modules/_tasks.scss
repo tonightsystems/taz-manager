@@ -1,0 +1,152 @@
+$task-secondary-color:          #b4b4b4;
+.task-list-wrapper {
+    overflow: hidden;
+    background: #fff;
+    padding: 10px;
+
+    header {
+        padding: 10px;
+        overflow: hidden;
+    }
+}
+.task-list-title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: normal;
+    color: lighten($text-color, 50%);
+}
+.task-list {
+    margin: 0;
+}
+.task-list-item {
+    list-style: none;
+    padding: 0 10px;
+    font-size: 14px;
+    overflow: hidden;
+    cursor: pointer;
+    @include border-radius();
+
+    &.active {
+        background-color: lighten($primary-color, 25%);
+
+        .task-list-item-inner {
+            box-shadow: none;
+        }
+    }
+}
+.task-list-item-add {
+    padding-left: 27px;
+}
+.task-list-item-inner {
+    position: relative;
+    padding: 7px 0;
+    overflow: hidden;
+    box-shadow: inset 0 -1px 0 lighten($border-color, 7%);
+}
+.task-checkbox {
+    position: relative;
+    cursor: pointer;
+    float: left;
+
+    &:before {
+        text-indent: 0;
+        position: absolute;
+        @extend .glyphicon;
+        content: "\e157";
+        font-size: 17px;
+        color: lighten($text-color, 30%);
+    }
+
+    &:hover:before {
+        content: "\e067";
+    }
+
+    &.checked:before {
+        content: "\e067";
+    }
+
+    input {
+        visibility: hidden;
+    }
+}
+.task-title {
+}
+.task-due-date,
+.task-asignee,
+.task-row-label {
+    position: relative;
+    color: $task-secondary-color;
+}
+.task-checkbox,
+.task-title,
+.task-due-date,
+.task-tags,
+.task-asignee {
+    padding-right: 15px !important;
+}
+.task {
+    padding: 10px 20px;
+
+    .task-row {
+        position: relative;
+        overflow: hidden;
+        padding-left: 35px;
+        margin-bottom: 10px;
+
+        &.task-row-title {
+            margin-bottom: 30px;
+        }
+
+        a {
+            color: $task-secondary-color;
+
+            &:focus,
+            &:hover {
+                color: $link-color;
+            }
+        }
+    }
+    .task-row-label,
+    .task-checkbox {
+        position: absolute;
+        left: 0;
+    }
+    .task-project {
+        color: $task-secondary-color;
+        position: relative;
+        font-style: normal;
+        display: block;
+    }
+    .task-checkbox:before {
+        font-size: 24px;
+        line-height: 24px;
+        top: -1px;
+    }
+    .task-title,
+    .task-title a {
+        color: $text-color;
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+.task-header {
+    overflow: hidden;
+    border-bottom: 1px solid $border-color;
+}
+.task-feed {
+    list-style: none;
+
+}
+.task-feed-item {
+    font-size: 13px;
+    line-height: 17px;
+    color: $task-secondary-color;
+    margin-bottom: 5px;
+}
+.task-feed-item-author {
+    font-weight: bold;
+}
+.task-feed-item-date {
+    display: inline-block;
+    margin-left: 10px;
+}

@@ -1,0 +1,132 @@
+#app-views {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: $sidebar-width;
+}
+#app-header {
+    position: relative;
+    height: $app-header-height;
+    left: 0;
+    right: 0;
+    background: lighten($primary-color, 10%);
+    overflow: hidden;
+    padding: 0;
+    z-index: 2;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
+    box-shadow: 0px -1px 0px rgba(0,0,0,0.1) inset;
+}
+.app-header-nav {
+    margin: 0;
+    padding: 0;
+    height: $app-header-height;
+
+    &.right {
+        position: absolute;
+        right: 0;
+    }
+
+    li {
+        display: inline-block;
+        list-style: none;
+        margin: 0;
+        float: left;
+    }
+
+    a {
+        color: $text-color;
+        text-decoration: none;
+        padding: 12px;
+        line-height: 44px;
+
+        .glyphicon {
+            font-size: 20px;
+            top: 4px;
+        }
+
+        &:active {
+            @include opacity(.7);
+        }
+    }
+}
+.app-header-title {
+    position: relative;
+    margin: 0;
+    font-size: 18px;
+    line-height: 44px;
+    font-weight: normal;
+    display: inline-block;
+    padding: 0 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#app-content {
+    position: absolute;
+    top: $app-header-height;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: auto;
+
+    &.has-app-panel {
+        right: 40%;
+    }
+}
+.content-box {
+    padding: 20px;
+}
+.content-inner {
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 1px #cbced2,
+                0px 1px 1px 1px rgba(0,0,0,0.05);
+}
+.toolbar {
+    padding: 6px 10px;
+    background: #f9f9f9;
+    border-bottom: 1px solid $border-color;
+    overflow: hidden;
+}
+.toolbar-section {
+    float: left;
+    border-right: 1px solid $border-color;
+    padding: 0 10px;
+    line-height: 26px;
+
+    &:last-of-type {
+        border-right: none;
+        padding-right: 0;
+    }
+}
+.toolbar-sections-left {
+    float: left;
+}
+.toolbar-sections-right {
+    float: right;
+}
+.toolbar-search {
+    width: 300px;
+    position: relative;
+
+   .input {
+        width: 100%;
+    }
+}
+#app-panel {
+    position: absolute;
+    display: none;
+    top: $app-header-height;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    min-width: 500px;
+    background: #fff;
+    box-shadow: 0 0 12px rgba(0,0,0,0.25),
+                0px 0 0 1px rgba(0,0,0,0.15);
+
+    &.active {
+        display: block;
+    }
+}

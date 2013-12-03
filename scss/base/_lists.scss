@@ -1,0 +1,11 @@
+ul,
+ol {
+    padding-left: 0;
+}
+ol {
+    list-style-type: decimal;
+}
+ul ul,
+ol ol {
+    padding-left: 15px;
+}
