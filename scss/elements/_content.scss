@@ -5,7 +5,7 @@
     right: 0;
     left: $sidebar-width;
 }
-.app-header {
+#app-header {
     position: relative;
     height: $app-header-height;
     left: 0;
@@ -62,13 +62,17 @@
     overflow: hidden;
     text-overflow: ellipsis;
 }
-.app-content {
+#app-content {
     position: absolute;
     top: $app-header-height;
     right: 0;
     left: 0;
     bottom: 0;
     overflow: auto;
+
+    &.has-app-panel {
+        right: 40%;
+    }
 }
 .content-box {
     padding: 20px;
@@ -81,7 +85,7 @@
 }
 .toolbar {
     padding: 6px 10px;
-    background: #fff;
+    background: #f9f9f9;
     border-bottom: 1px solid $border-color;
     overflow: hidden;
 }
@@ -108,5 +112,21 @@
 
    .input {
         width: 100%;
+    }
+}
+#app-panel {
+    position: absolute;
+    display: none;
+    top: $app-header-height;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+    min-width: 500px;
+    background: #fff;
+    box-shadow: 0 0 12px rgba(0,0,0,0.25),
+                0px 0 0 1px rgba(0,0,0,0.15);
+
+    &.active {
+        display: block;
     }
 }

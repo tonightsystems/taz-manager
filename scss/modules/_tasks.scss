@@ -1,3 +1,4 @@
+$task-secondary-color:          #b4b4b4;
 .task-list-wrapper {
     overflow: hidden;
     background: #fff;
@@ -57,7 +58,7 @@
     }
 
     &:hover:before {
-        color: $text-color;
+        content: "\e067";
     }
 
     &.checked:before {
@@ -68,17 +69,84 @@
         visibility: hidden;
     }
 }
-.task-name {
+.task-title {
 }
-.task-due-date {
+.task-due-date,
+.task-asignee,
+.task-row-label {
     position: relative;
-    color: #b4b4b4;
+    color: $task-secondary-color;
 }
-
 .task-checkbox,
-.task-name,
+.task-title,
 .task-due-date,
 .task-tags,
 .task-asignee {
     padding-right: 15px !important;
+}
+.task {
+    padding: 10px 20px;
+
+    .task-row {
+        position: relative;
+        overflow: hidden;
+        padding-left: 35px;
+        margin-bottom: 10px;
+
+        &.task-row-title {
+            margin-bottom: 30px;
+        }
+
+        a {
+            color: $task-secondary-color;
+
+            &:focus,
+            &:hover {
+                color: $link-color;
+            }
+        }
+    }
+    .task-row-label,
+    .task-checkbox {
+        position: absolute;
+        left: 0;
+    }
+    .task-project {
+        color: $task-secondary-color;
+        position: relative;
+        font-style: normal;
+        display: block;
+    }
+    .task-checkbox:before {
+        font-size: 24px;
+        line-height: 24px;
+        top: -1px;
+    }
+    .task-title,
+    .task-title a {
+        color: $text-color;
+        font-size: 24px;
+        line-height: 28px;
+    }
+}
+.task-header {
+    overflow: hidden;
+    border-bottom: 1px solid $border-color;
+}
+.task-feed {
+    list-style: none;
+
+}
+.task-feed-item {
+    font-size: 13px;
+    line-height: 17px;
+    color: $task-secondary-color;
+    margin-bottom: 5px;
+}
+.task-feed-item-author {
+    font-weight: bold;
+}
+.task-feed-item-date {
+    display: inline-block;
+    margin-left: 10px;
 }
