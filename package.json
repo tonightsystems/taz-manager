@@ -7,6 +7,7 @@
         "name": "Tonight Systems Team",
         "url": "http://github.com/tonightsystems"
     },
+    "main": "app.js",
     "repository": {
         "type": "git",
         "url": "git://github.com/tonightsystems/taz-manager.git"
