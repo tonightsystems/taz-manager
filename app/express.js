@@ -12,11 +12,11 @@ module.exports = function(app) {
     // HTML bonito :)
     app.locals.pretty = true;
 
-    // Favicon
-    app.use(express.favicon());
-
     // Define o local dos arquivos estaticos
     app.use(express.static('public'));
+
+    // Favicon
+    app.use(express.favicon('img/favicon.png'));
 
     // Loga os requests no console
     app.use(express.logger('dev'));
