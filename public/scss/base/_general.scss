@@ -1,0 +1,63 @@
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+html {
+    overflow-y: auto;
+    height: 100%;
+}
+body {
+    background: $background-color;
+    font-size: $font-size;
+    line-height: $line-height;
+    font-family: $default-font;
+    font-weight: $font-weight;
+    color: $text-color;
+    overflow: hidden;
+    min-height: 100%;
+
+    text-rendering: optimizeLegibility;
+
+    -webkit-font-smoothing: subpixel-antialiased;
+            font-smoothing: subpixel-antialiased;
+
+    -webkit-font-feature-settings: "liga";
+       -moz-font-feature-settings: "liga=1";
+        -ms-font-feature-settings: "liga";
+            font-feature-settings: "liga";
+}
+p {
+    margin: 0 0 20px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+a {
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover {
+        color: $link-hover-color;
+        text-decoration: underline;
+    }
+    &:visited {
+        color: $link-color;
+    }
+    &:visited,
+    &:hover {
+        outline: none;
+    }
+}
+small {
+    font-size: 85%;
+}
+img {
+    -ms-interpolation-mode: bicubic;
+}
+code {
+    font-family: $mono-font;
+}
