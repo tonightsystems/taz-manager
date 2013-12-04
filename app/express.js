@@ -1,4 +1,6 @@
 var express = require('express'),
+    engine = require('ejs-locals'),
+    path = require('path'),
     config = require('./config');
 
 module.exports = function(app) {
@@ -14,16 +16,18 @@ module.exports = function(app) {
     app.use(express.favicon());
 
     // Define o local dos arquivos estaticos
-    app.use(express.static(__dirname + '/public'));
+    app.use(express.static('public'));
 
     // Loga os requests no console
     app.use(express.logger('dev'));
 
-    // Define o caminho das views
-    app.set('views', config.root + '/app/views');
+    app.engine('ejs', engine);
 
     // Define o template engine padrao
-    app.set('view engine', 'jade');
+    app.set('view engine', 'ejs');
+
+    // Define o caminho das views
+    app.set('views', path.join(__dirname, 'views'));
 
     // Habilita JSONP
     app.enable("jsonp callback");

@@ -10,7 +10,9 @@ module.exports = function(app) {
 
     // Users
     app.get('/users', users.users);
+    app.get('/api/users', users._users);
 
     // Tasks
     app.get('/tasks', tasks.tasks);
+    app.get('/api/tasks', tasks._tasks);
 };

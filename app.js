@@ -1,6 +1,9 @@
-var
+var app,
     // Express
     express = require('express'),
+
+    // File System
+    fs = require('fs'),
 
     // Mongoose
     mongoose = require('mongoose'),
@@ -9,10 +12,13 @@ var
     config = require('./app/config'),
 
     // Conexão com o banco de dados
-    db = mongoose.connect(config.db),
+    db = mongoose.connect(config.db);
 
-    // Instancia do App
-    app = express();
+// Carrega os models
+config.walk(__dirname + '/app/models');
+
+// Instancia do app
+app = express();
 
 // Carrega as configs do express
 require('./app/express')(app);
